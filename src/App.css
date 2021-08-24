@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
-}
+/* App Styles */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App{
+  margin-top: 10vh;
+  width: 450px;
+  height: 80vh;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  background-color: var(--glass-white);
+  border-radius: 1rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+
+  box-shadow: 0px 5px 100px black;
+}
+
+.component{
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.title{
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Image React */
+.reactImg {
+  width: 6.25rem;
+  position: absolute;
+  top: 37%;
+  left: 51%;
+  justify-self: center;
+  margin:-60px 0 0 -60px;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
 }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
