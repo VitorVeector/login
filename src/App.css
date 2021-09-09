@@ -8,20 +8,18 @@
   background-color: var(--glass-white);
   border-radius: 1rem;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr;
 
+  align-items:center;
+  justify-content: center;
   box-shadow: 0px 5px 100px black;
 }
 
 .component{
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .title{
@@ -33,11 +31,7 @@
 /* Image React */
 .reactImg {
   width: 6.25rem;
-  position: absolute;
-  top: 37%;
-  left: 51%;
   justify-self: center;
-  margin:-60px 0 0 -60px;
   -webkit-animation:spin 4s linear infinite;
   -moz-animation:spin 4s linear infinite;
   animation:spin 4s linear infinite;
