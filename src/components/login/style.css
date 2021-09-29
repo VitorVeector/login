@@ -1,0 +1,19 @@
+.form-login_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.success{
+    background-color: #30da8a60;
+    border-radius: 1rem;
+}
+
+.failed{
+    background-color: #e73c7e71;
+    border-radius: 1rem;
+}

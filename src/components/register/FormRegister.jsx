@@ -4,9 +4,9 @@ import "./style.css";
 class FormRegister extends Component {
   constructor(props){
     super(props)
-    this.email = ""
-    this.pass =  ""
-    this.passVrf = ""
+    this.email = ''
+    this.pass =  ''
+    this.passVrf = ''
   };
 
   methods = {
@@ -17,7 +17,7 @@ class FormRegister extends Component {
       e.target.className = this.passEqual === false ? "form-register_form invalid" : "form-register_form confirm"
       if(this.passEqual === false){
       } else {
-        this.props.setUsr(this.email, this.pass)
+        this.props.setUsr(this.email, this.pass, this.passEsqual)
       }
     },
     getEmail(e){
@@ -31,11 +31,6 @@ class FormRegister extends Component {
     getPassVrf(e){
       e.stopPropagation()
       this.passVrf = e.target.value
-    },
-    setLogin(e){
-      e.stopPropagation()
-      e.preventDefault()
-      this.props.setUsr(this.email, this.pass)
     }
   }
 

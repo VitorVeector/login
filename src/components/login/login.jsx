@@ -4,8 +4,8 @@ import './style.css'
 class Login extends Component{
     constructor(props){
         super(props)
-        this.email = ""
-        this.pass = ""
+        this.email = ''
+        this.pass = ''
     }
 
     methods = {
@@ -13,17 +13,18 @@ class Login extends Component{
             e.stopPropagation()
             e.preventDefault()
             
+            e.target.className = this.props.status === true ? "form-login_form success" : "form-login_form failed"
+            this.props.setLogin(this.email, this.pass)
         },
         setEmail(e){
             e.stopPropagation()
             this.email = e.target.value
-            console.log(this.props.email)
           },
         setPass(e){
             e.stopPropagation()
             this.pass = e.target.value
-            console.log(this.props.email)
         }
+        
     }
 
     render(){
@@ -32,6 +33,7 @@ class Login extends Component{
                 <form 
                     action="" 
                     className="form-login_form"
+                    onSubmit={this.methods.setInfo.bind(this)}
                     >
                         <input 
                             className="input input-email"
@@ -41,7 +43,6 @@ class Login extends Component{
                             placeholder="Enter your e-mail"
                             onChange={this.methods.setEmail.bind(this)}
                             />
-
                         <input 
                             className="input input-password"
                             type="password" 
@@ -49,7 +50,7 @@ class Login extends Component{
                             id="input-password"
                             placeholder="Enter your password"
                             onChange={this.methods.setPass.bind(this)} />
-                        <button onClick={this.methods.setInfo}>LOGIN</button>
+                        <button className="input-register_input">LOGIN</button>
                 </form>
             </div>
         )
